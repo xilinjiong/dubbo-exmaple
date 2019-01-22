@@ -2,6 +2,8 @@ package com.xilin.jiong.bean;
 
 import lombok.Data;
 
+import java.io.Serializable;
+
 /**
  * 〈一句话功能简述〉<br>
  * 〈用户相关数据〉
@@ -12,7 +14,7 @@ import lombok.Data;
  */
 
 @Data
-public class UserVo {
+public class UserVo implements Serializable {
     /**
      * 主键
      */

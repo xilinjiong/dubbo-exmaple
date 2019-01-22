@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xilin.jiong.mapper.OrderMapper">
+  <resultMap id="BaseResultMap" type="com.xilin.jiong.bean.Order">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="order_no" jdbcType="VARCHAR" property="orderNo" />
+    <result column="user_id" jdbcType="BIGINT" property="userId" />
+    <result column="cdate" jdbcType="TIMESTAMP" property="cdate" />
+    <result column="pay_date" jdbcType="TIMESTAMP" property="payDate" />
+    <result column="pay_money" jdbcType="DECIMAL" property="payMoney" />
+    <result column="state" jdbcType="TINYINT" property="state" />
+  </resultMap>
+</mapper>

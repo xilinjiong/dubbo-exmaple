@@ -3,23 +3,19 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-      <!--  <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.0.8.RELEASE</version>
-        <relativePath/>   -->
         <groupId>com.xilin.jiong</groupId>
         <artifactId>dubbo-example</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath>../pom.xml</relativePath>
+       <!-- <relativePath>../pom.xml</relativePath>-->
     </parent>
     <groupId>com.xilin.jiong</groupId>
-    <artifactId>exmaple-user</artifactId>
+    <artifactId>example-order</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>exmaple-user</name>
-    <description>使用dubbo的user用户service</description>
+    <name>example-order</name>
+    <description>springboot 集成dubbo 的order service</description>
 
-  <properties>
-
+    <properties>
+        <java.version>1.8</java.version>
     </properties>
 
     <dependencies>
@@ -37,7 +33,7 @@
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
             <artifactId>mybatis-spring-boot-starter</artifactId>
-           <!-- <version>1.3.2</version>-->
+            <!-- <version>1.3.2</version>-->
         </dependency>
 
 
@@ -51,7 +47,7 @@
         <dependency>
             <groupId>tk.mybatis</groupId>
             <artifactId>mapper-spring-boot-starter</artifactId>
-           <!-- <version>${tk-mybatis.version}</version>-->
+            <!-- <version>${tk-mybatis.version}</version>-->
         </dependency>
 
 
@@ -59,14 +55,14 @@
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid-spring-boot-starter</artifactId>
-           <!-- <version>${druid.version}</version>-->
+            <!-- <version>${druid.version}</version>-->
         </dependency>
 
         <!--分页-->
         <dependency>
             <groupId>com.github.pagehelper</groupId>
             <artifactId>pagehelper</artifactId>
-          <!--  <version>${pagehelper.version}</version>-->
+            <!--  <version>${pagehelper.version}</version>-->
         </dependency>
 
         <dependency>
@@ -117,3 +113,4 @@
     </build>
 
 </project>
+
