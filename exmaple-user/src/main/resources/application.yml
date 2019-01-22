@@ -1,0 +1,42 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: example-user
+  datasource:
+    druid:
+      url: jdbc:mysql://192.168.0.105:3306/dubbo-db?characterEncoding=utf-8&useSSL=false
+      username: root
+      password: Wyawy123!@#
+      driver-class-name: com.mysql.jdbc.Driver
+
+#mybatis的相关配置
+mybatis:
+  type-aliases-package: com.xilin.jiong.bean
+  mapper-locations: classpath:mapper/*.xml
+  configLocation: classpath:config/mybatis/mybatis-config.xml
+#mapper映射文件的配置
+mapper:
+  mappers: com.xilin.jiong.basemapper.BaseMapper
+  not-empty: false
+  identity: MYSQL
+#分页插件的配置
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
+  offset-as-page-num: true
+
+  #dubbo 的相关配置
+dubbo:
+  application:
+    name: exmaple-user
+  registry:
+    address: zookeeper://192.168.0.105:2182?backup=192.168.0.105:2183,192.168.0.105:2184
+  protocol:
+    name: dubbo
+    port: 20881
+  monitor:
+    protocol: registry
+
