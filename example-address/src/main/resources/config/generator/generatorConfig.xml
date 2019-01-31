@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <!-- 配置mysql 驱动jar包路径.用了绝对路径 -->
+    <!-- <classPathEntry location="C:\\Users\\Administrator\\.m2\\repository\\mysql\\mysql-connector-java\\5.1.46\\mysql-connector-java-5.1.46.jar" />
+ -->
+    <context id="Mysql" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+
+        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+            <property name="mappers" value="com.xilin.jiong.basemapper.BaseMapper"/>
+        </plugin>
+
+        <plugin type="org.mybatis.generator.plugins.ToStringPlugin"/>
+        <plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin"/>
+        <plugin type="org.mybatis.generator.plugins.SerializablePlugin"/>
+        <!-- 数据库-->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://192.168.0.105:3306/dubbo-db"
+                        userId="root"
+                        password="Wyawy123!@#">
+        </jdbcConnection>
+
+        <javaModelGenerator targetPackage="com.xilin.jiong.bean" targetProject="src/main/java"/>
+
+        <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources"/>
+
+        <javaClientGenerator targetPackage="com.xilin.jiong.mapper" targetProject="src/main/java"
+                             type="XMLMAPPER" />
+
+        <table tableName="t_address" domainObjectName="Address">
+            <property name="useActualColumnNames" value="false"/>
+        </table>
+        <!--<table tableName="bargain_merchant_apply">-->
+        <!--<property name="useActualColumnNames" value="false"/>-->
+        <!--</table>-->
+        <!--<table tableName="bargain_basic_config">-->
+        <!--<property name="useActualColumnNames" value="false"/>-->
+        <!--</table>-->
+        <!--<table tableName="bargain_entry_config">-->
+        <!--<property name="useActualColumnNames" value="false"/>-->
+        <!--</table>-->
+        <!--<table tableName="bargain_record">-->
+        <!--<property name="useActualColumnNames" value="false"/>-->
+        <!--</table>-->
+        <!--<table tableName="bargain_aid_record">-->
+        <!--<property name="useActualColumnNames" value="false"/>-->
+        <!--</table>-->
+    </context>
+</generatorConfiguration>

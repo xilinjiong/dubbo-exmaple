@@ -37,6 +37,8 @@ dubbo:
   protocol:
     name: dubbo
     port: 20884
-#  monitor:
-#   protocol: registry
+  #consumer:关闭所有服务的启动时检查 (没有提供者时报错)
+    #check: true
+monitor:
+  protocol: registry
 

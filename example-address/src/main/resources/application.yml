@@ -1,8 +1,8 @@
 server:
-  port: 8001
+  port: 8007
 spring:
   application:
-    name: example-user
+    name: example-address
   datasource:
     druid:
       url: jdbc:mysql://192.168.0.105:3306/dubbo-db?characterEncoding=utf-8&useSSL=false
@@ -28,15 +28,4 @@ pagehelper:
   params: count=countSql
   offset-as-page-num: true
 
-  #dubbo 的相关配置
-dubbo:
-  application:
-    name: exmaple-user
-  registry:
-    address: zookeeper://192.168.0.105:2182?backup=192.168.0.105:2183,192.168.0.105:2184
-  protocol:
-    name: dubbo
-    port: 20881
-monitor:
-  protocol: registry
 
